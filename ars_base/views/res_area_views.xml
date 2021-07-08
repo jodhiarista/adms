@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <odoo>
+    
+         <record id="view_area_form" model="ir.ui.view">
+            <field name="name">res.area.form</field>
+            <field name="model">res.area</field>
+            <field name="arch" type="xml">
+                <form string="Area">
+                  <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="code"/>
+                            <field name="short_name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_res_area_form" model="ir.actions.act_window">
+            <field name="name">Area</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.area</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face">
+                Create a new Area
+              </p><p>
+                Create and manage the area that will be managed by Odoo from here. 
+              </p>
+            </field>
+        </record>
+        <menuitem action="action_res_area_form" id="menu_action_res_area_form" parent="base.menu_users"/>
+    
+    </odoo>
+    
